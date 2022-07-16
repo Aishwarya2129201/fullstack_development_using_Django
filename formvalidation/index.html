@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BS5 CSS -->
+    <link rel="stylesheet" href="bs/bootstrap.min.css">
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto my-3 p-3 border rounded">
+                <h3 class="display-4 text-center my-2">Registration Form</h3>
+                <form action="thankyou.html" onsubmit="return validate();">
+                    <div class="my-1">
+                        <label for="name">Name<span class="text-danger">*</span></label>
+                        <input type="text" name="name" id="name" class="form-control">
+                        <label for="name error" id="name_error" class="text-danger"></label>
+                    </div>
+                    <div class="my-1">
+                        <label for="gender">Gender<span class="text-danger">*</span></label><br>
+                        <input type="radio" name="gender" id="male" class="mx-2">Male
+                        <input type="radio" name="gender" id="female" class="mx-2">Female
+                        <input type="radio" name="gender" id="other" class="mx-2">Other<br>
+                        <label for="gender error" id="gender_error" class="text-danger"></label>
+                    </div>
+                    <div class="my-1">
+                        <label for="branch">Branch<span class="text-danger">*</span></label>
+                        <select name="branch" id="branch" class="form-select my-1">
+                        <option value="">--Select--</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="EIE">EIE</option>
+                    </select>
+                        <label for="branch error" id="branch_error" class="text-danger"></label>
+                    </div>
+                    <div class="my-1">
+                        <label for="mobile">Mobile<span class="text-danger">*</span></label>
+                        <input type="tel" name="mobile" id="mobile" class="form-control">
+                        <label for="mobile error" id="mobile_error" class="text-danger"></label>
+                    </div>
+                    <div class="my-1">
+                        <label for="email">Email<span class="text-danger">*</span></label>
+                        <input type="text" name="email" id="email" class="form-control">
+                        <label for="email error" id="email_error" class="text-danger"></label>
+                    </div>
+                    <div class="my-1">
+                        <label for="password">Password<span class="text-danger">*</span></label>
+                        <p><small class="text-muted">Password must be 8-16 character long and should contain atleast one lowercase, one uppercase, one special character amd a number.</small></p>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <label for="password error" id="password_error" class="text-danger"></label>
+                    </div>
+                    <div class="my-1">
+                        <label for="password2">Confirm Password<span class="text-danger">*</span></label>
+                        <input type="password" name="password2" id="password2" class="form-control">
+                        <label for="confirm password error" id="password2_error" class="text-danger"></label>
+                    </div>
+                    <div class="my-1">
+                        <p><small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur ipsa at illum placeat nihil temporibus itaque consequatur enim magnam quod, velit, earum ipsam magni minima ducimus inventore amet corporis voluptatibus.</small></p>
+                        <input type="checkbox" name="term" id="term">I Agree
+                        <br>
+                        <label for="term error" id="term_error" class="text-danger"></label>
+                    </div>
+                    <input type="submit" value="Register" class="btn btn-primary w-100 my-2">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Custom JS -->
+    <script src="js/validation.js"></script>
+    <!-- BS5 JS -->
+    <script src="bs/bootstrap.bundle.js"></script>
+</body>
+
+</html>
